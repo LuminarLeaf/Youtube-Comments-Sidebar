@@ -4,7 +4,7 @@ This userscript swaps the suggested videos sidebar with the comments section on 
 
 ## Install
 
-[![Install](https://img.shields.io/badge/Install-brightgreen)](https://raw.githubusercontent.com/LuminarLeaf/Youtube-Comments-Sidebar/main/script.user.js)
+[![Install](https://img.shields.io/badge/Install-brightgreen)](https://github.com/LuminarLeaf/Youtube-Comments-Sidebar/raw/master/script.user.js)
 
 ## Instructions
 
