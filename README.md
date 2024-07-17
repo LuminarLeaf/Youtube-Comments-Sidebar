@@ -20,7 +20,3 @@ To use this script, you will need a userscript manager like Tampermonkey or Viol
 
 Once installed, the script runs automatically on Youtube video pages. There's no need for manual activation.
 
-## Known Issues
-
-- There is this scrollbar that appears on the page which doesn't belong to the primary and secondary columns. I am too lazy to find which element is causing this issue. If you find it, please create a pull request.
-   ![image](https://raw.githubusercontent.com/LuminarLeaf/Youtube-Comments-Sidebar/master/images/stray_scrollbar.png)

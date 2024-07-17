@@ -3,7 +3,7 @@
 // @author       LuminarLeaf
 // @namespace    Violentmonkey Scripts
 // @description  Swaps the suggested videos sidebar with the comments on Youtube videos.
-// @version      1.02
+// @version      1.03
 // @match        *://www.youtube.com/watch*
 // @noframes
 // @run-at       document-idle
@@ -42,7 +42,14 @@ const swapElements = (element1, element2) => {
         }
         #primary, #secondary {
             overflow-y: auto;
-            max-height: 100vh;
+            max-height: calc(100vh - var(--ytd-masthead-height,var(--ytd-toolbar-height)));
+            padding-top: 0 !important;
+        }
+        #primary {
+            overflow-x: hidden;
+        }
+        #player {
+            padding-top: var(--ytd-margin-6x);
         }
     `);
 })();
