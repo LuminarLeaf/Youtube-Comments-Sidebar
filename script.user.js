@@ -3,7 +3,7 @@
 // @author       LuminarLeaf
 // @namespace    Violentmonkey Scripts
 // @description  Swaps the suggested videos sidebar with the comments on Youtube videos.
-// @version      1.1
+// @version      1.02
 // @match        *://www.youtube.com/watch*
 // @noframes
 // @run-at       document-idle
@@ -40,11 +40,7 @@ const swapElements = (element1, element2) => {
         #comments {
             padding: 0 10px;
         }
-        #primary {
-            overflow-y: auto;
-            max-height: 100vh;
-        }
-        #secondary {
+        #primary, #secondary {
             overflow-y: auto;
             max-height: 100vh;
         }
