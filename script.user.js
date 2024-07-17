@@ -9,9 +9,8 @@
 // @run-at       document-idle
 // @grant        GM_addStyle
 // @homepage     https://github.com/LuminarLeaf/Youtube-Comments-Sidebar
-// @downloadURL  https://raw.githubusercontent.com/LuminarLeaf/Youtube-Comments-Sidebar/main/script.user.js
-// @updateURL    https://raw.githubusercontent.com/LuminarLeaf/Youtube-Comments-Sidebar/main/script.user.js
-// ==/UserScript==
+// @downloadURL  https://github.com/LuminarLeaf/Youtube-Comments-Sidebar/raw/master/script.user.js
+// @updateURL    https://github.com/LuminarLeaf/Youtube-Comments-Sidebar/raw/master/script.user.js
 
 const isElementLoaded = async (selector) => {
     while (document.querySelector(selector) === null) {
