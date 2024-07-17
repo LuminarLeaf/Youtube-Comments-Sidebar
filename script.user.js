@@ -3,7 +3,7 @@
 // @author       LuminarLeaf
 // @namespace    Violentmonkey Scripts
 // @description  Swaps the suggested videos sidebar with the comments on Youtube videos.
-// @version      1.03
+// @version      1.04
 // @match        *://www.youtube.com/watch*
 // @noframes
 // @run-at       document-idle
@@ -30,7 +30,7 @@ const swapElements = (element1, element2) => {
     parent2.appendChild(element1);
 };
 
-(async () => {
+async function swapSidebar() {
     const comments = await isElementLoaded("#comments");
     const suggested = await isElementLoaded("#related");
 
@@ -52,4 +52,17 @@ const swapElements = (element1, element2) => {
             padding-top: var(--ytd-margin-6x);
         }
     `);
-})();
+}
+
+swapSidebar();
+
+async function addSwapButton() {
+    const commentsTitle = await isElementLoaded("#comments div#title");
+    const swapButton = document.createElement("button");
+    swapButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m320-160-56-57 103-103H80v-80h287L264-503l56-57 200 200-200 200Zm320-240L440-600l200-200 56 57-103 103h287v80H593l103 103-56 57Z"/></svg>`;
+    swapButton.style = "background: none; border: none; cursor: pointer; padding: 0; margin: 0 0 0 auto; display: inline-block; vertical-align: middle; fill: var(--yt-spec-text-primary);";
+    swapButton.onclick = swapSidebar;
+    commentsTitle.appendChild(swapButton);
+}
+
+addSwapButton();
