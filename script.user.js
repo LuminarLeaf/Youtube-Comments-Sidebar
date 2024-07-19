@@ -31,24 +31,25 @@ const swapElements = (element1, element2) => {
 };
 
 async function swapSidebar() {
-    const comments = await isElementLoaded("#comments");
-    const suggested = await isElementLoaded("#related");
+    const comments = await isElementLoaded("#content #page-manager ytd-watch-flexy #columns ytd-comments#comments");
+    const suggested = await isElementLoaded("#content #page-manager ytd-watch-flexy #columns div#related");
 
     swapElements(comments, suggested);
 
     GM_addStyle(`
-        #comments {
+        #content #page-manager ytd-watch-flexy #columns ytd-comments#comments #comments {
             padding: 0 10px;
         }
-        #primary, #secondary {
+        #content #page-manager ytd-watch-flexy #columns #primary,
+        #content #page-manager ytd-watch-flexy #columns #secondary {
             overflow-y: auto;
             max-height: calc(100vh - var(--ytd-masthead-height,var(--ytd-toolbar-height)));
             padding-top: 0 !important;
         }
-        #primary {
+        #content #page-manager ytd-watch-flexy #columns #primary {
             overflow-x: hidden;
         }
-        #primary #player {
+        #content #page-manager ytd-watch-flexy #columns #primary #player {
             padding-top: var(--ytd-margin-6x);
         }
     `);
