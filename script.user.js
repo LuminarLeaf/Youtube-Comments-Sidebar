@@ -3,7 +3,7 @@
 // @author       LuminarLeaf
 // @namespace    Violentmonkey Scripts
 // @description  Swaps the suggested videos sidebar with the comments on Youtube videos.
-// @version      1.05
+// @version      1.06
 // @match        http*://*.youtube.com/*
 // @noframes
 // @run-at       document-idle
