@@ -3,10 +3,9 @@
 // @author       LuminarLeaf
 // @namespace    Violentmonkey Scripts
 // @description  Swaps the suggested videos sidebar with the comments on Youtube videos.
-// @version      1.06
+// @version      1.07
 // @match        http*://*.youtube.com/*
 // @noframes
-// @run-at       document-idle
 // @grant        GM_addStyle
 // @homepage     https://github.com/LuminarLeaf/Youtube-Comments-Sidebar
 // @downloadURL  https://github.com/LuminarLeaf/Youtube-Comments-Sidebar/raw/master/script.user.js
@@ -35,7 +34,9 @@ async function swapSidebar() {
     const suggested = await isElementLoaded("#content #page-manager ytd-watch-flexy #columns div#related");
 
     swapElements(comments, suggested);
+}
 
+async function addStyles() {
     GM_addStyle(`
         #content #page-manager ytd-watch-flexy #columns ytd-comments#comments #comments {
             padding: 0 10px;
@@ -56,6 +57,8 @@ async function swapSidebar() {
 }
 
 swapSidebar();
+
+addStyles();
 
 async function addSwapButton() {
     const commentsTitle = await isElementLoaded("#comments div#title");
