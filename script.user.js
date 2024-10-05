@@ -10,6 +10,7 @@
 // @homepage     https://github.com/LuminarLeaf/Youtube-Comments-Sidebar
 // @downloadURL  https://github.com/LuminarLeaf/Youtube-Comments-Sidebar/raw/master/script.user.js
 // @updateURL    https://github.com/LuminarLeaf/Youtube-Comments-Sidebar/raw/master/script.user.js
+// ==/UserScript==
 
 const isElementLoaded = async (selector) => {
     while (document.querySelector(selector) === null) {
